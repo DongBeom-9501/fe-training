@@ -29,7 +29,7 @@ export default function OrderTable() { ... }
 import OrderTable from './components/OrderTable';
 ```
 
-**실무 규칙**: 팀마다 다르지만, **named export를 기본으로 쓰는 팀이 늘고 있습니다.** 이름이 강제되어 자동완성과 리팩터링이 안정적이기 때문입니다. 다만 Next.js의 페이지 파일처럼 **프레임워크가 default export를 요구하는 자리** 가 있습니다(23장).
+**실무 규칙**: 팀마다 다르지만, **named export를 기본으로 쓰는 팀이 늘고 있습니다.** 이름이 강제되어 자동완성과 리팩터링이 안정적이기 때문입니다. 다만 Next.js의 페이지 파일처럼 **프레임워크가 default export를 요구하는 자리** 가 있습니다(30장).
 
 ### 경로 세 가지
 
@@ -45,7 +45,7 @@ import { useQuery } from '@tanstack/react-query'; // 패키지 이름 — node_m
 
 A가 B를 import하고 B가 A를 import하면, Java에서는 문제없지만 JavaScript에서는 **초기화 순서에 따라 결과가 달라집니다.** 운이 좋으면 그냥 동작하고, 나쁘면 "초기화되기 전에 접근했다"는 `ReferenceError`가 납니다. 에러가 나는 지점과 원인이 멀어서 찾기 어렵습니다.
 
-> **예방법**: 의존성 방향을 한쪽으로 유지하세요. 백엔드에서 도메인 → 서비스 → 컨트롤러 방향을 지키는 것과 같은 원칙입니다. 린터로 잡을 수 있습니다(33장).
+> **예방법**: 의존성 방향을 한쪽으로 유지하세요. 백엔드에서 도메인 → 서비스 → 컨트롤러 방향을 지키는 것과 같은 원칙입니다. 린터로 잡을 수 있습니다(23장).
 
 ## package.json 읽기
 
@@ -134,7 +134,7 @@ admin-console/
 ├── node_modules/          설치된 패키지 (커밋 금지, .gitignore)
 ├── public/                그대로 서빙되는 정적 파일
 └── src/
-    ├── app/               라우팅 (23장)
+    ├── app/               라우팅 (30장)
     ├── components/        재사용 컴포넌트
     └── lib/               유틸리티, API 클라이언트
 ```
